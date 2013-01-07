@@ -15,16 +15,26 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 Bundle 'scrooloose/nerdtree'
+Bundle 'majutsushi/tagbar'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
-Bundle 'msanders/snipmate.vim'
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "lamengao/vim-snipmate"
+
 Bundle 'mattn/zencoding-vim'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'pangloss/vim-javascript'
-Bundle 'kana/vim-smartinput'
+Bundle 'ervandew/supertab'
+Bundle 'Raimondi/delimitMate'
+"Bundle 'kana/vim-smartinput'
+"Bundle 'Shougo/neocomplcache.git'
+Bundle 'toggle_words.vim'
 
 filetype plugin indent on     " required!
 
@@ -142,6 +152,7 @@ let NERDTreeWinSize=30
 let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 "let NERDTreeShowBookmarks=1
+
 " Ctrlp
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-cr>'],
@@ -150,5 +161,19 @@ let g:ctrlp_prompt_mappings = {
     \ }
 noremap <leader>b <Esc>:CtrlPBuffer<CR>
 
+"---NeoComplCache 启动
+"let g:neocomplcache_enable_at_startup = 1 
+
+" Tagbar
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_width=30
+
+"toggle words
+nmap ,t :ToggleWord<CR>
+let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}
+
+
 " Keybindings for plugin toggle
 map <F7> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+nnoremap <leader>a :Ack 
