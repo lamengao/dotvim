@@ -19,22 +19,25 @@ Bundle 'majutsushi/tagbar'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-matchit'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "lamengao/vim-snipmate"
 
-Bundle 'mattn/zencoding-vim'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'pangloss/vim-javascript'
 Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
 "Bundle 'kana/vim-smartinput'
 "Bundle 'Shougo/neocomplcache.git'
+Bundle 'mattn/zencoding-vim'
+Bundle 'tpope/vim-surround'
 Bundle 'toggle_words.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'sjl/gundo.vim'
+
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/syntastic'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 filetype plugin indent on     " required!
 
@@ -146,7 +149,6 @@ if has('gui_running')
 endif
 
 " Nerd Tree 
-"let NERDChristmasTree=0
 let NERDTreeWinSize=30
 "let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
@@ -161,7 +163,7 @@ let g:ctrlp_prompt_mappings = {
     \ }
 noremap <leader>b <Esc>:CtrlPBuffer<CR>
 
-"---NeoComplCache 启动
+"NeoComplCache 启动
 "let g:neocomplcache_enable_at_startup = 1 
 
 " Tagbar
@@ -169,11 +171,13 @@ let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_width=30
 
 "toggle words
-nmap ,t :ToggleWord<CR>
 let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}
 
 
-" Keybindings for plugin toggle
+" Keybindings for plugin
 map <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap <leader>a :Ack 
+nmap <leader>t :ToggleWord<CR>
+nnoremap <F5> :GundoToggle<CR>
+"<Leader>ig toggle vim-indent-guides
