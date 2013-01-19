@@ -1,4 +1,4 @@
-first. install vundle:  
+## install
     
-    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    $ curl -fsSkL raw.github.com/lamengao/dotvim/master/install.sh | sh
 
