@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ ! -d $vimDir ]]; then
+if [ -d ~/.vim ]; then
     echo '.vim directory already exists.'
     exit
 fi
