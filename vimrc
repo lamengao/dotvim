@@ -48,6 +48,7 @@ set nowritebackup
 " 不要生成swap文件，当buffer被丢弃的时候隐藏它
 "setlocal noswapfile
 "set noswapfile
+set dir=/tmp
 
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -162,6 +163,10 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("h")': ['<c-x>', '<c-s>'],
     \ }
 noremap <leader>b <Esc>:CtrlPBuffer<CR>
+" Syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['html'] }
 
 "NeoComplCache 启动
 "let g:neocomplcache_enable_at_startup = 1 
@@ -174,10 +179,11 @@ let g:tagbar_width=30
 let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}
 
 
-" Keybindings for plugin
+" Keybindings for plugins
 map <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 nnoremap <leader>a :Ack 
 nmap <leader>t :ToggleWord<CR>
 nnoremap <F5> :GundoToggle<CR>
 "<Leader>ig toggle vim-indent-guides
+" '<c-y>,' for zencoding
