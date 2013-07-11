@@ -25,6 +25,9 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "lamengao/vim-snipmate"
 
+Bundle "othree/html5.vim"
+Bundle "lunaru/vim-less"
+
 Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
 "Bundle 'kana/vim-smartinput'
@@ -97,7 +100,7 @@ set shiftwidth=4    " indent width
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType sass,scss,css,less setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
