@@ -26,7 +26,8 @@ Bundle "tomtom/tlib_vim"
 Bundle "lamengao/vim-snipmate"
 
 Bundle "othree/html5.vim"
-Bundle "lunaru/vim-less"
+"Bundle "lunaru/vim-less"
+Bundle "skammer/vim-css-color"
 
 Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
@@ -34,7 +35,7 @@ Bundle 'Raimondi/delimitMate'
 "Bundle 'Shougo/neocomplcache.git'
 Bundle 'mattn/zencoding-vim'
 Bundle 'tpope/vim-surround'
-Bundle 'toggle_words.vim'
+Bundle 'vim-scripts/toggle_words.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'sjl/gundo.vim'
 
@@ -120,6 +121,7 @@ set showcmd         " 输入的命令显示出来，看的清楚些。
 
 " 垂直分割屏幕
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>W <C-w>s<C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -188,5 +190,7 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap <leader>a :Ack 
 nmap <leader>t :ToggleWord<CR>
 nnoremap <F5> :GundoToggle<CR>
+"keybindings 备忘
 "<Leader>ig toggle vim-indent-guides
 " '<c-y>,' for zencoding
+" [easymotion] <Leader><Leader>t, <Leader><Leader>gE
