@@ -33,7 +33,9 @@ Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
 "Bundle 'kana/vim-smartinput'
 "Bundle 'Shougo/neocomplcache.git'
-Bundle 'mattn/zencoding-vim'
+
+"previously known as Zen Coding
+Bundle "mattn/emmet-vim"
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/toggle_words.vim'
 Bundle 'scrooloose/nerdcommenter'
@@ -42,6 +44,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-indent-guides'
+
+Bundle 'powerman/vim-plugin-autosess'
 
 filetype plugin indent on     " required!
 
@@ -135,7 +139,8 @@ inoremap <C-b> <Left>
 
 if has('gui_running')
 	"colo natalie
-	set guifont=Monaco:h13"
+	"set guifont=Monaco:h13"
+	set guifont=Monaco:h20"
 	set guioptions-=rL          "去除滚动条
 	"Toggle Menu and Toolbar
 	set guioptions-=m
