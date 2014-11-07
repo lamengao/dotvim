@@ -102,6 +102,7 @@ set smartindent		" indent when
 set tabstop=4       " tab width
 set softtabstop=4   " backspace & 
 set shiftwidth=4    " indent width
+autocmd FileType text setlocal noexpandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -187,6 +188,9 @@ let g:tagbar_width=30
 
 "toggle words
 let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}
+
+" ctrl-p
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 
 " Keybindings for plugins
