@@ -192,6 +192,10 @@ let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}
 " ctrl-p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" nerdcommenter
+" for python
+let g:NERDSpaceDelims = 1
+
 
 " Keybindings for plugins
 map <F7> :NERDTreeToggle<CR>

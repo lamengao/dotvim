@@ -1,2 +1,3 @@
 *.swp
 autosess/
+.DS_Store
