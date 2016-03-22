@@ -16,6 +16,7 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
+" TODO: use ctrlpvim/ctrlp.vim instead kien/ctrlp
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
@@ -174,6 +175,9 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("h")': ['<c-x>', '<c-s>'],
     \ }
 noremap <leader>b <Esc>:CtrlPBuffer<CR>
+" ctrl-p
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|data\|log'
+
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
@@ -189,12 +193,13 @@ let g:tagbar_width=30
 "toggle words
 let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}
 
-" ctrl-p
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
 " nerdcommenter
 " for python
 let g:NERDSpaceDelims = 1
+
+" syntastic
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+let g:syntastic_python_checkers = ['pyflakes']
 
 
 " Keybindings for plugins
