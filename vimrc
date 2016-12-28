@@ -46,6 +46,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-indent-guides'
 
+Bundle 'leafgarland/typescript-vim'
+
 Bundle 'powerman/vim-plugin-autosess'
 
 filetype plugin indent on     " required!
@@ -107,6 +109,7 @@ autocmd FileType text setlocal noexpandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd FileType scheme setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType sass,scss,css,less setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2
